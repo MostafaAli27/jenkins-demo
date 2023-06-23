@@ -1,5 +1,5 @@
 pipeline {
-     agent any
+     agent { label 'ec2' }
     parameters {
         booleanParam(name:'project', defaultValue: true, description:'this paramater help you to know project name')
         choice(name: 'namespace', choices:['dev','prod','stage'], description: '' ) 
